@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const alphaOsc = Math.sin(p.pulse) * 0.15 + p.alpha;
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(201, 169, 110, ${Math.max(0, alphaOsc)})`;
+      ctx.fillStyle = `rgba(56, 189, 248, ${Math.max(0, alphaOsc)})`;
       ctx.fill();
     }
 
@@ -155,11 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 150) {
-            const alpha = (1 - dist / 150) * 0.06;
+            const alpha = (1 - dist / 150) * 0.08;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(201, 169, 110, ${alpha})`;
+            ctx.strokeStyle = `rgba(37, 99, 235, ${alpha})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -170,12 +170,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function animate() {
       ctx.clearRect(0, 0, width, height);
 
-      // Subtle ink wash blobs
+      // Subtle ambient blue glow blobs
       const gradient1 = ctx.createRadialGradient(
         width * 0.3, height * 0.6, 0,
         width * 0.3, height * 0.6, width * 0.4
       );
-      gradient1.addColorStop(0, 'rgba(201, 169, 110, 0.03)');
+      gradient1.addColorStop(0, 'rgba(37, 99, 235, 0.08)');
       gradient1.addColorStop(1, 'transparent');
       ctx.fillStyle = gradient1;
       ctx.fillRect(0, 0, width, height);
