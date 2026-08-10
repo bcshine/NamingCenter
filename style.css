@@ -73,6 +73,7 @@ body {
   font-family: var(--font-sans);
   line-height: 1.7;
   overflow-x: hidden;
+  word-break: keep-all;
 }
 
 a {
@@ -376,18 +377,19 @@ img {
 }
 
 .hero-text-col {
-  max-width: 620px;
+  max-width: 780px;
   text-align: left;
 }
 
 /* Title */
 .hero-main-title {
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-size: clamp(2.4rem, 5.2vw, 4.2rem);
   font-weight: 900;
-  line-height: 1.15;
+  line-height: 1.18;
   letter-spacing: -0.03em;
   color: #FFFFFF;
   margin-bottom: 28px;
+  word-break: keep-all;
 }
 
 .cyan-gradient {
@@ -396,6 +398,7 @@ img {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
+  white-space: nowrap;
 }
 
 /* Subtitle */
@@ -1629,6 +1632,10 @@ img {
 
   .nav-toggle {
     display: flex;
+  }
+
+  .cyan-gradient {
+    white-space: normal;
   }
 
   .hero-stats-grid {
