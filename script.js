@@ -217,4 +217,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ─── Load More Portfolio Cards ───
+  const btnLoadMore = document.getElementById('btnLoadMore');
+  const galleryMoreWrap = document.getElementById('galleryMoreWrap');
+
+  if (btnLoadMore) {
+    btnLoadMore.addEventListener('click', () => {
+      const hiddenCards = document.querySelectorAll('.card-hidden');
+      hiddenCards.forEach((card, idx) => {
+        card.classList.remove('card-hidden');
+        card.style.animation = `fadeInUp 0.4s ease forwards ${idx * 0.05}s`;
+      });
+      if (galleryMoreWrap) {
+        galleryMoreWrap.style.display = 'none';
+      }
+    });
+  }
+
 });
