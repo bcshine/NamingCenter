@@ -623,11 +623,11 @@ img {
    BRAND VISUAL CARDS GALLERY (3 COLUMNS - IMAGE TOP, BRAND TITLE BOTTOM)
    ============================================ */
 .brand-visual-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 32px !important;
-  margin-top: 40px !important;
-  width: 100% !important;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+  width: 100%;
 }
 
 .brand-visual-card {
@@ -698,14 +698,31 @@ img {
 @media (max-width: 992px) {
   .brand-visual-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 20px;
   }
 }
 
 @media (max-width: 600px) {
   .brand-visual-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+  }
+
+  .card-img-wrap {
+    height: 200px;
+    max-height: 200px;
+  }
+
+  .card-img {
+    max-height: 200px !important;
+  }
+
+  .card-text-body {
+    padding: 16px 18px;
+  }
+
+  .card-brand-title {
+    font-size: 1.15rem;
   }
 }
 
@@ -1634,12 +1651,97 @@ img {
     display: flex;
   }
 
+  /* Hero Mobile Optimization */
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-layout {
+    min-height: auto;
+    padding: 90px 0 28px;
+  }
+
+  .hero-text-col {
+    max-width: 100%;
+  }
+
+  .hero-main-title {
+    font-size: clamp(1.55rem, 6.2vw, 2.1rem);
+    margin-bottom: 14px;
+    line-height: 1.25;
+    word-break: keep-all;
+  }
+
   .cyan-gradient {
     white-space: normal;
   }
 
+  .hero-sub-desc {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .btn-primary-blue,
+  .btn-secondary-purple,
+  .btn-outline-dark {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 0.88rem;
+    border-radius: 10px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  /* Compact Hero Stats Bar on Mobile */
+  .hero-stats-bar {
+    position: relative;
+    padding: 14px 0;
+    background: rgba(11, 19, 43, 0.96);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
   .hero-stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 14px;
+  }
+
+  .hero-stat-card {
+    gap: 10px;
+    padding: 4px 0;
+  }
+
+  .hero-stat-card:not(:last-child) {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .stat-icon-wrap {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .stat-icon-wrap svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .stat-value {
+    font-size: 0.95rem;
+    font-weight: 800;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
   }
 
   .gallery-grid {
