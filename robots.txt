@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bcshine.github.io/NamingCenter/sitemap.xml
