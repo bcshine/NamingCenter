@@ -688,8 +688,8 @@ img {
 }
 
 .card-brand-title {
-  font-size: 1.4rem;
-  font-weight: 900;
+  font-size: 1.32rem;
+  font-weight: 500;
   color: var(--light-text-main);
   letter-spacing: -0.02em;
   line-height: 1.25;
